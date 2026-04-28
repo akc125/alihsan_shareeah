@@ -1,0 +1,181 @@
+
+.headerMain {
+  width: 100%;
+  background: #08306b;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 12px 0;
+}
+
+.headerWrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.staffBtn {
+  background: #fff;
+  color: #08306b !important;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/************************************
+  STICKY SCROLL HEADER
+*************************************/
+.stickyHeader {
+  width: 100%;
+  position: fixed;
+  top: -60px;
+  left: 0;
+  padding: 14px;
+  background: #05204a;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+/* Reveal placeholder effect when scrolling */
+body.scrolled .stickyHeader {
+  top: 0;
+}
+
+/************************************
+  HERO CAROUSEL (SLIDE LEFT)
+*************************************/
+.hero {
+  width: 100%;
+  overflow: hidden;
+  background: #f7f8fc;
+  padding: 40px 0;
+  position: relative;
+}
+
+.slideTrack {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  gap: 30px;
+}
+
+.slideText {
+  flex: 1;
+}
+
+.slideText h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #05204a;
+}
+
+.slideText p {
+  font-size: 16px;
+  color: #333;
+  max-width: 480px;
+}
+
+.slideImgBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.slideImg {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/************************************
+  CAROUSEL DOTS
+*************************************/
+.dotsBox {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeDot {
+  background: #08306b;
+  transform: scale(1.2);
+}
+
+/************************************
+  PAGE BODY
+*************************************/
+.pageBody {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.pageBody h2 {
+  margin-bottom: 10px;
+  color: #05204a;
+  font-size: 28px;
+}
+
+.pageBody p {
+  font-size: 16px;
+  color: #444;
+}
+
+
+/************************************
+  JS HELPERS
+*************************************/
+/* Add scroll detection for sticky header */
+:global(html body) { scroll-behavior: smooth; }
