@@ -122,7 +122,7 @@ export default function CampusMoments() {
   return (
     <Box sx={{ py: 10, backgroundColor: "#fafafa" }}>
       <Container maxWidth="lg">
-        <Typography variant="h4" fontWeight={700} textAlign="center" mb={5}>
+        <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center", mb: 5 }}>
           Campus Moments
         </Typography>
       </Container>

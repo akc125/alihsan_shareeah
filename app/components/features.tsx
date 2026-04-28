@@ -49,19 +49,14 @@ export default function FeaturesSection() {
       <Typography
         variant="h4"
         align="center"
-        fontWeight={700}
-        mb={2}
-        color="#05204a"
+        sx={{ fontWeight: 700, mb: 2, color: "#05204a" }}
       >
         Why Choose Us
       </Typography>
 
       <Typography
         align="center"
-        maxWidth={600}
-        mx="auto"
-        mb={8}
-        color="text.secondary"
+        sx={{ maxWidth: 600, mx: "auto", mb: 8, color: "text.secondary" }}
       >
         We provide a holistic educational experience that blends knowledge,
         values, and practical skills for a better future.
@@ -121,12 +116,12 @@ export default function FeaturesSection() {
               </Box>
 
               {/* Title */}
-              <Typography fontWeight={600} mb={1}>
+              <Typography sx={{ fontWeight: 600, mb: 1 }}>
                 {item.title}
               </Typography>
 
               {/* Description */}
-              <Typography fontSize={14} color="text.secondary">
+              <Typography sx={{ fontSize: 14, color: "text.secondary" }}>
                 {item.text}
               </Typography>
             </Box>

@@ -38,9 +38,9 @@ export default function VisionMissionWithIcons() {
           {/* Vision */}
           <Box sx={{ flex: 1 }}>
             <Stack spacing={2}>
-              <Stack direction="row" spacing={2} alignItems="center">
+              <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
                 <SchoolIcon sx={{ color: '#fff', fontSize: 34 }} />
-                <Typography variant="h4" fontWeight={700} color="white">
+                <Typography variant="h4" sx={{ fontWeight: 700, color: "white" }}>
                   Our Vision
                 </Typography>
               </Stack>
@@ -63,9 +63,9 @@ export default function VisionMissionWithIcons() {
           {/* Mission */}
           <Box sx={{ flex: 1 }}>
             <Stack spacing={2}>
-              <Stack direction="row" spacing={2} alignItems="center">
+              <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
                 <FlagIcon sx={{ color: '#fff', fontSize: 34 }} />
-                <Typography variant="h4" fontWeight={700} color="white">
+                <Typography variant="h4" sx={{ fontWeight: 700, color: "white" }}>
                   Our Mission
                 </Typography>
               </Stack>

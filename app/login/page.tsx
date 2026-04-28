@@ -117,10 +117,10 @@ export default function LoginPage() {
                 <LockOutlinedIcon sx={{ fontSize: 32 }} />
               </Box>
             </Box>
-            <Typography variant="h5" fontWeight={800} color={theme.text} mb={1}>
+            <Typography variant="h5" sx={{ fontWeight: 800, color: theme.text, mb: 1 }}>
               Welcome Back
             </Typography>
-            <Typography variant="body2" color={theme.textSecondary} mb={4}>
+            <Typography variant="body2" sx={{ color: theme.textSecondary, mb: 4 }}>
               Sign in to manage your institution.
             </Typography>
 
@@ -132,7 +132,7 @@ export default function LoginPage() {
                   variant="outlined"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  InputLabelProps={{ style: { fontWeight: 500 } }}
+                  sx={{ '& .MuiInputLabel-root': { fontWeight: 500 } }}
                 />
                 <TextField
                   fullWidth
@@ -141,19 +141,21 @@ export default function LoginPage() {
                   variant="outlined"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          onClick={() => setShowPassword(!showPassword)}
-                          edge="end"
-                        >
-                          {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                      </InputAdornment>
-                    ),
+                  slotProps={{
+                    input: {
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton
+                            onClick={() => setShowPassword(!showPassword)}
+                            edge="end"
+                          >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    }
                   }}
-                  InputLabelProps={{ style: { fontWeight: 500 } }}
+                  sx={{ '& .MuiInputLabel-root': { fontWeight: 500 } }}
                 />
 
                 <Button

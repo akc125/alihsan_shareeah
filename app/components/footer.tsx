@@ -40,11 +40,11 @@ export default function Footer() {
         >
           {/* SECTION 1 */}
           <Box sx={{ flex: 2, minWidth: 260 }}>
-            <Typography variant="h6" fontWeight={700} mb={2}>
+            <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
               Al Ihsan College of Islamic Shareeah
             </Typography>
 
-            <Typography variant="body2" lineHeight={1.8}>
+            <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
               Al Ihsan College of Islamic Shareeah is a premier institution
               dedicated to providing authentic Islamic education combined with
               strong moral values and academic excellence. The college nurtures
@@ -55,13 +55,13 @@ export default function Footer() {
 
           {/* SECTION 2 */}
           <Box sx={{ flex: 1, minWidth: 180 }}>
-            <Typography variant="h6" fontWeight={600} mb={2}>
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Quick Links
             </Typography>
 
             {["Home", "About", "Departments", "Programs", "Contact"].map(
               (item) => (
-                <Typography key={item} mb={1}>
+                <Typography key={item} sx={{ mb: 1 }}>
                   <Link href="#" underline="hover" color="inherit">
                     {item}
                   </Link>
@@ -72,13 +72,13 @@ export default function Footer() {
 
           {/* SECTION 3 */}
           <Box sx={{ flex: 1, minWidth: 180 }}>
-            <Typography variant="h6" fontWeight={600} mb={2}>
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Resources
             </Typography>
 
             {["Admissions", "Campus Life", "Gallery", "News", "Alumni"].map(
               (item) => (
-                <Typography key={item} mb={1}>
+                <Typography key={item} sx={{ mb: 1 }}>
                   <Link href="#" underline="hover" color="inherit">
                     {item}
                   </Link>
@@ -89,23 +89,23 @@ export default function Footer() {
 
           {/* SECTION 4 */}
           <Box sx={{ flex: 2, minWidth: 260 }}>
-            <Typography variant="h6" fontWeight={600} mb={2}>
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Get In Touch
             </Typography>
 
-            <Box display="flex" mb={1}>
+            <Box sx={{ display: "flex", mb: 1 }}>
               <LocationOnIcon sx={{ mr: 1 }} />
               <Typography variant="body2">
                 Vengara, Malappuram, Kerala, India
               </Typography>
             </Box>
 
-            <Box display="flex" mb={1}>
+            <Box sx={{ display: "flex", mb: 1 }}>
               <PhoneIcon sx={{ mr: 1 }} />
               <Typography variant="body2">+91 9XXXXXXXXX</Typography>
             </Box>
 
-            <Box display="flex" mb={1}>
+            <Box sx={{ display: "flex", mb: 1 }}>
               <EmailIcon sx={{ mr: 1 }} />
               <Typography variant="body2">
                 info@alihsancollege.edu
@@ -114,7 +114,7 @@ export default function Footer() {
 
    
 
-            <Typography fontWeight={600} mb={1}>
+            <Typography sx={{ fontWeight: 600, mb: 1 }}>
               Connect With Us
             </Typography>
 

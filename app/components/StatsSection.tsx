@@ -53,12 +53,12 @@ function StatItem({ item }: any) {
       </Box>
 
       {/* Number */}
-      <Typography variant="h3" fontWeight={700}>
+      <Typography variant="h3" sx={{ fontWeight: 700 }}>
         {inView ? <CountUp end={item.value} duration={2} /> : 0}+
       </Typography>
 
       {/* Label */}
-      <Typography mt={1} fontSize={15} sx={{ opacity: 0.9 }}>
+      <Typography sx={{ mt: 1, fontSize: 15, opacity: 0.9 }}>
         {item.label}
       </Typography>
     </Box>
@@ -102,12 +102,10 @@ export default function StatsSection() {
       <Grid
         container
         spacing={6}
-        maxWidth="1100px"
-        mx="auto"
-        justifyContent="center"
+        sx={{ maxWidth: "1100px", mx: "auto", justifyContent: "center" }}
       >
         {stats.map((item, index) => (
-          <Grid item xs={6} sm={4} md={2.4} key={index}>
+          <Grid size={{ xs: 6, sm: 4, md: 2.4 }} key={index}>
             <StatItem item={item} />
           </Grid>
         ))}

@@ -100,8 +100,8 @@ function NavMenu({ color }: { color: string }) {
         anchor="right"
         open={open}
         onClose={() => setOpen(false)}
-        PaperProps={{
-          sx: {
+        sx={{
+          "& .MuiDrawer-paper": {
             width: "80%",
             maxWidth: 320,
             background: "#05204a",
@@ -111,7 +111,7 @@ function NavMenu({ color }: { color: string }) {
       >
         <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between", p: 2 }}>
-            <Typography fontWeight={700}>Menu</Typography>
+            <Typography sx={{ fontWeight: 700 }}>Menu</Typography>
             <IconButton onClick={() => setOpen(false)} sx={{ color: "white" }}>
               <CloseIcon />
             </IconButton>
@@ -144,8 +144,10 @@ function NavMenu({ color }: { color: string }) {
                   >
                     <ListItemText
                       primary={item.label}
-                      primaryTypographyProps={{
-                        fontWeight: active ? 700 : 400,
+                      sx={{
+                        "& .MuiListItemText-primary": {
+                          fontWeight: active ? 700 : 400,
+                        },
                       }}
                     />
                   </ListItemButton>
@@ -211,7 +213,7 @@ export default function Home() {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography fontWeight={700}>Al Ihsan</Typography>
+          <Typography sx={{ fontWeight: 700 }}>Al Ihsan</Typography>
           <NavMenu color="white" />
         </Toolbar>
       </AppBar>
@@ -228,7 +230,7 @@ export default function Home() {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography fontWeight={700}>Al Ihsan</Typography>
+          <Typography sx={{ fontWeight: 700 }}>Al Ihsan</Typography>
           <NavMenu color="#05204a" />
         </Toolbar>
       </AppBar>

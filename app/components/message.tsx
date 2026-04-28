@@ -17,7 +17,7 @@ export default function ChairmanMessage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           //   viewport={{ once: true }}
         >
-          <Typography variant="h4" align="center" fontWeight="bold" mb={6}>
+          <Typography variant="h4" align="center" sx={{ fontWeight: "bold", mb: 6 }}>
             <span style={{ color: "#1b5e20" }}>Usthad&apos;s</span>{" "}
             <span style={{ color: "#c58b2d" }}>Message</span>
           </Typography>
@@ -58,7 +58,7 @@ export default function ChairmanMessage() {
               flex: 1,
             }}
           >
-            <Typography variant="h6" fontWeight="bold" color="success.dark">
+            <Typography variant="h6" sx={{ fontWeight: "bold", color: "success.dark" }}>
              Usthad TT Ahmad Kutty Saqafi
             </Typography>
 
@@ -66,14 +66,14 @@ export default function ChairmanMessage() {
               President, Al Ihsan
             </Typography>
 
-            <Typography variant="body1" color="text.secondary" paragraph>
+            <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
              Alihsan daras is an Islamic religious study center located in Vengara, Kerala.
               It focuses on providing Islamic education  to students,
               including Qur’an studies, Hadith, Fiqh, Aqeedah, and moral
               teachings. 
             </Typography>
 
-            <Typography variant="body1" color="text.secondary" paragraph>
+            <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
              The Daras aims to nurture students with strong Islamic
               values, good character, and community responsibility. Along with
               religious learning, it encourages discipline, spirituality, and

@@ -47,11 +47,11 @@ export default function AboutSection() {
               transition={{ duration: 0.9 }}
               style={{ flex: 1 }}
             >
-              <Typography variant="h4" fontWeight={700} mb={2}>
+              <Typography variant="h4" sx={{ fontWeight: 700, mb: 2 }}>
                 About <span style={{ color: "#b68f1e" }}>Al Ihsan College of Islamic Shari'ah</span>
               </Typography>
 
-              <Typography color="text.secondary" mb={2}>
+              <Typography sx={{ color: "text.secondary", mb: 2 }}>
                 AICIS (Al Ihsan College of Islamic Shariah) is a respected Islamic
                 educational institution dedicated to providing quality religious
                 education along with strong moral and ethical training. The
@@ -59,7 +59,7 @@ export default function AboutSection() {
                 other essential Islamic sciences
               </Typography>
 
-              <Typography color="text.secondary" mb={2}>
+              <Typography sx={{ color: "text.secondary", mb: 2 }}>
                aiming to nurture
                 knowledgeable scholars and responsible community leaders. With a
                 disciplined learning environment and commitment to spiritual

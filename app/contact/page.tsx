@@ -96,8 +96,8 @@ export default function ContactPage() {
         </IconButton>
 
         <Container maxWidth="lg" sx={{ py: 8 }}>
-          <Box textAlign="center" mb={6} component={motion.div} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Typography variant="h2" fontWeight={900} color={themeDetails.text} gutterBottom sx={{ letterSpacing: "-1px" }}>
+          <Box sx={{ textAlign: "center", mb: 6 }} component={motion.div} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <Typography variant="h2" gutterBottom sx={{ fontWeight: 900, color: themeDetails.text, letterSpacing: "-1px" }}>
               Get in Touch
             </Typography>
             <Typography variant="h6" color={themeDetails.textSecondary} sx={{ maxWidth: 600, mx: "auto", fontWeight: 400 }}>
@@ -105,9 +105,9 @@ export default function ContactPage() {
             </Typography>
           </Box>
 
-          <Grid container spacing={6} alignItems="stretch">
+          <Grid container spacing={6} sx={{ alignItems: "stretch" }}>
             {/* Contact Info */}
-            <Grid item xs={12} md={5}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <MotionPaper
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -126,30 +126,30 @@ export default function ContactPage() {
                 {/* Decorative blob */}
                 <Box sx={{ position: "absolute", right: -50, top: -50, width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,0.1)", filter: "blur(20px)" }} />
                 
-                <Typography variant="h4" fontWeight={800} mb={6} sx={{ position: "relative", zIndex: 1 }}>
+                <Typography variant="h4" sx={{ fontWeight: 800, mb: 6, position: "relative", zIndex: 1 }}>
                   Contact Information
                 </Typography>
 
                 <Stack spacing={4} sx={{ position: "relative", zIndex: 1 }}>
-                  <Stack direction="row" spacing={3} alignItems="center">
+                  <Stack direction="row" spacing={3} sx={{ alignItems: "center" }}>
                     <LocationOnIcon sx={{ fontSize: 32, opacity: 0.9 }} />
                     <Box>
                       <Typography variant="caption" sx={{ opacity: 0.8, textTransform: "uppercase", letterSpacing: 1 }}>Location</Typography>
-                      <Typography variant="h6" fontWeight={600}>Al Ihsan Campus, Kerala</Typography>
+                      <Typography variant="h6" sx={{ fontWeight: 600 }}>Al Ihsan Campus, Kerala</Typography>
                     </Box>
                   </Stack>
-                  <Stack direction="row" spacing={3} alignItems="center">
+                  <Stack direction="row" spacing={3} sx={{ alignItems: "center" }}>
                     <PhoneIcon sx={{ fontSize: 32, opacity: 0.9 }} />
                     <Box>
                       <Typography variant="caption" sx={{ opacity: 0.8, textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</Typography>
-                      <Typography variant="h6" fontWeight={600}>+91 98765 43210</Typography>
+                      <Typography variant="h6" sx={{ fontWeight: 600 }}>+91 98765 43210</Typography>
                     </Box>
                   </Stack>
-                  <Stack direction="row" spacing={3} alignItems="center">
+                  <Stack direction="row" spacing={3} sx={{ alignItems: "center" }}>
                     <EmailIcon sx={{ fontSize: 32, opacity: 0.9 }} />
                     <Box>
                       <Typography variant="caption" sx={{ opacity: 0.8, textTransform: "uppercase", letterSpacing: 1 }}>Email Address</Typography>
-                      <Typography variant="h6" fontWeight={600}>info@alihsan.edu</Typography>
+                      <Typography variant="h6" sx={{ fontWeight: 600 }}>info@alihsan.edu</Typography>
                     </Box>
                   </Stack>
                 </Stack>
@@ -157,7 +157,7 @@ export default function ContactPage() {
             </Grid>
 
             {/* Contact Form */}
-            <Grid item xs={12} md={7}>
+            <Grid size={{ xs: 12, md: 7 }}>
               <MotionPaper
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -173,19 +173,19 @@ export default function ContactPage() {
               >
                 <form onSubmit={handleSendMessage}>
                   <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <TextField fullWidth name="firstName" label="First Name" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} InputProps={{ disableUnderline: true }} required />
+                    <Grid size={{ xs: 12, sm: 6 }}>
+                      <TextField fullWidth name="firstName" label="First Name" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} slotProps={{ input: { disableUnderline: true } }} required />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <TextField fullWidth name="lastName" label="Last Name" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} InputProps={{ disableUnderline: true }} required />
+                    <Grid size={{ xs: 12, sm: 6 }}>
+                      <TextField fullWidth name="lastName" label="Last Name" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} slotProps={{ input: { disableUnderline: true } }} required />
                     </Grid>
-                    <Grid item xs={12}>
-                      <TextField fullWidth name="email" label="Email Address" type="email" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} InputProps={{ disableUnderline: true }} required />
+                    <Grid size={{ xs: 12 }}>
+                      <TextField fullWidth name="email" label="Email Address" type="email" variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} slotProps={{ input: { disableUnderline: true } }} required />
                     </Grid>
-                    <Grid item xs={12}>
-                      <TextField fullWidth name="message" label="Your Message" multiline rows={4} variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} InputProps={{ disableUnderline: true }} required />
+                    <Grid size={{ xs: 12 }}>
+                      <TextField fullWidth name="message" label="Your Message" multiline rows={4} variant="filled" sx={{ background: "rgba(255,255,255,0.6)", borderRadius: 1 }} slotProps={{ input: { disableUnderline: true } }} required />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <Button
                         type="submit"
                         fullWidth
