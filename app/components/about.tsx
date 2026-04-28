@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -71,6 +72,8 @@ export default function AboutSection() {
 
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Button
+                  component={Link}
+                  href="/about"
                   variant="contained"
                   sx={{
                     backgroundColor: "#14452f",

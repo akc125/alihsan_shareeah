@@ -29,6 +29,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import FeaturesSection from "./components/features";
 import StatsSection from "./components/StatsSection";
+import LocationMap from "./components/locationMap";
 
 /* ---------------- NAV MENU ---------------- */
 
@@ -57,7 +58,7 @@ function NavMenu({ color }: { color: string }) {
                 sx={{
                   position: "relative",
                   fontWeight: active ? 700 : 500,
-                  color: "inherit",
+                  color: color,
 
                   "&::after": {
                     content: '""',
@@ -263,6 +264,7 @@ export default function Home() {
       <VisionMissionWithIcons />
       <ChairmanMessage />
       <StatsSection />
+      <LocationMap />
       <CampusMoments />
       <Footer />
     </Box>
