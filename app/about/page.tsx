@@ -8,10 +8,10 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -19,7 +19,7 @@ const staggerContainer = {
   },
 };
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
@@ -28,7 +28,7 @@ const fadeInUp = {
   },
 };
 
-const scaleUp = {
+const scaleUp: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: { 
     opacity: 1, 
@@ -148,7 +148,7 @@ export default function About() {
                 bg: "linear-gradient(145deg, #ffffff, #f8fafc)",
               }
             ].map((item, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
                 <motion.div variants={scaleUp} whileHover={{ y: -12 }} transition={{ duration: 0.3 }}>
                   <Card 
                     elevation={0}
