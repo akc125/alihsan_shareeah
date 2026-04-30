@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { API_URL } from "@/app/lib/api";
 import {
   Box,
   Container,
@@ -46,7 +47,7 @@ const MotionPaper = motion(Paper);
 export default function ContactPage() {
   const router = useRouter();
 
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -60,7 +61,7 @@ export default function ContactPage() {
         message: formData.get("message"),
       };
       
-      const res = await fetch("http://localhost:5000/api/messages", {
+      const res = await fetch(`${API_URL}/messages`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

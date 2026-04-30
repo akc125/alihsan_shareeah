@@ -19,6 +19,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { API_URL } from "@/app/lib/api";
 import toast, { Toaster } from "react-hot-toast";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Outfit } from "next/font/google";
@@ -59,7 +60,7 @@ export default function RegisterPage() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/register", {
+      const res = await fetch(`${API_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

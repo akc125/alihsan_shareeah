@@ -44,11 +44,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Outfit } from "next/font/google";
 import { useRouter } from "next/navigation";
+import { API_URL, API_BASE_URL } from "@/app/lib/api";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
 const STATUS = ["In Progress", "Dropped", "Completed"];
-const API_URL = "https://alihsan-shareeath-college.onrender.com/api";
 
 const lightTheme = {
   bg: "linear-gradient(135deg, #f0fdfa, #e0f2fe)", 
@@ -383,7 +383,7 @@ export default function BatchStudentDashboard() {
     setEditingStudent(st);
     setStatusValue(st.status || "In Progress");
     setStudentImage(null);
-    setPreviewImage(st.image ? `${API_URL.replace('/api', '')}${st.image}` : null);
+    setPreviewImage(st.image ? `${API_BASE_URL}${st.image}` : null);
     setErrors({});
     setOpenStudent(true);
   };
@@ -669,7 +669,7 @@ export default function BatchStudentDashboard() {
                           
                           <Stack direction="row" spacing={2.5} alignItems="center">
                             <Avatar
-                              src={st.image ? `${API_URL.replace('/api', '')}${st.image}` : undefined}
+                              src={st.image ? `${API_BASE_URL}${st.image}` : undefined}
                               alt={st.name}
                               sx={{ 
                                 width: 70, height: 70, 
