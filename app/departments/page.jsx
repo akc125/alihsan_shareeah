@@ -48,7 +48,7 @@ import { useRouter } from "next/navigation";
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
 const STATUS = ["In Progress", "Dropped", "Completed"];
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://alihsan-shareeath-college.onrender.com/api";
 
 const lightTheme = {
   bg: "linear-gradient(135deg, #f0fdfa, #e0f2fe)", 

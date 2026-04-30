@@ -22,6 +22,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
+import ContactLocationMap from "../components/contactLocationMap";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
@@ -216,6 +217,7 @@ export default function ContactPage() {
           </Grid>
         </Container>
       </Box>
+      <ContactLocationMap />
     </ThemeProvider>
   );
 }
